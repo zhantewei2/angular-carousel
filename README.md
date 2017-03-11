@@ -8,6 +8,7 @@
 app.module:
             
                 import {CarouselModuleModule} from 'angular2-carousel-simple/carousel-module.module';
+                ...
                 {
                     imports:[...,CarouselModuleModule]
                 }
