@@ -22,7 +22,7 @@ angular-carousel-module
                 <img [src]='...' ztw-carousel-img>
               </ztw-carouse-item>
             </ztw-carousel>
-and:
+or:
     
          <ztw-carousel>
               <ztw-carouse-item *ngFor='...'>
