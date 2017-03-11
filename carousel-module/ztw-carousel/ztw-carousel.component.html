@@ -1,0 +1,13 @@
+<div class="main">
+  <span class="pre btn" (click)="pre()"><a class="showMsn"> &lt;</a></span>
+  <span class="next btn" (click)="next()"><a class="showMsn"> &gt;</a></span>
+  <nav>
+    <div (click)="selectImg(i)" *ngFor="let i of navBar.arr">
+      <span  class="navItem"  [class.selectedImg]="index==i">&nbsp;</span>
+    </div>
+    <div class="showMsn" *ngIf="navBar.page!==0">
+      {{navBar.page}}
+    </div>
+  </nav>
+  <ng-content></ng-content>
+</div>
