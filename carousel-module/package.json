@@ -1,0 +1,26 @@
+{
+  "name": "angular2-carousel-ztw",
+  "version": "1.0.1",
+  "description": "simple carousel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhantewei2/angular-carousel.git"
+  },
+  "keywords": [
+    "angular",
+    "carousel"
+  ],
+  "author": "zhantewei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhantewei2/angular-carousel/issues"
+  },
+  "homepage": "https://github.com/zhantewei2/angular-carousel#readme",
+  "devDependencies": {
+    "angular2-carousel-simple": "^1.0.0"
+  }
+}

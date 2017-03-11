@@ -60,11 +60,11 @@ nav>div:hover{
 }
 .pre{
   left:0px;
-  background:linear-gradient(left,rgba(0,0,0,0.3),rgba(0,0,0,0))
+  background:linear-gradient(to right,rgba(0,0,0,0.3),rgba(0,0,0,0))
 }
 .next{
   right:0px;
-  background:linear-gradient(right,rgba(0,0,0,0.3),rgba(0,0,0,0))
+  background:linear-gradient(to left,rgba(0,0,0,0.3),rgba(0,0,0,0))
 }
 :host{
   width:100%;
