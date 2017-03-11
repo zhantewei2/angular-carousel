@@ -5,6 +5,5 @@ angular-carousel-module
             <ztw-carousel>
               <ztw-carouse-item *ngFor='...'>
                 <img [src]='...' ztw-carousel-img>
-                <span ztw-carousel-header></span>
               </ztw-carouse-item>
             </ztw-carousel>
