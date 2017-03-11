@@ -1,6 +1,6 @@
 # angular-carousel
 
-#intall package#:
+#intall package:
 
 `npm install angular2-carousel-simple`
 
