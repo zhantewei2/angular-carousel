@@ -7,8 +7,7 @@ angular-carousel-module
                 <img [src]='...' ztw-carousel-img>
               </ztw-carouse-item>
             </ztw-carousel>
-
-    and:
+and:
     
          <ztw-carousel>
               <ztw-carouse-item *ngFor='...'>
@@ -19,3 +18,13 @@ angular-carousel-module
                 </div>
               </ztw-carouse-item>
             </ztw-carousel>
+            
+ 
+ `ztw-carousel`
+ attribution:
+    reverse: false(default) |true
+    ***
+    interval: :  false(default) | number(ms)
+        
+    ***
+    cyclic:  true(default) | false
