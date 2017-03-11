@@ -19,15 +19,15 @@ and:
               </ztw-carouse-item>
             </ztw-carousel>
             
- 
+ ***
  `ztw-carousel`
  
  
  attribution:
  
  
-reverse: false(default) |true
-***
-interval: :  false(default) | number(ms)
-***
-cyclic:  true(default) | false
+*reverse: false(default) |true
+
+*interval: :  false(default) | number(ms)
+
+*cyclic:  true(default) | false
