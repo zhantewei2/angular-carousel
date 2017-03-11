@@ -4,7 +4,7 @@ angular-carousel-module
     
             <ztw-carousel>
               <ztw-carouse-item >
-                <img  ztw-carousel-img>
+                <img [src]='..' ztw-carousel-img>
                 <span ztw-carousel-header></span>
               </ztw-carouse-item>
             </ztw-carousel>
