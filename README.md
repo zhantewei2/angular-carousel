@@ -26,8 +26,8 @@ and:
  attribution:
  
  
-*reverse: false(default) |true
+* reverse: false(default) |true
 
-*interval: :  false(default) | number(ms)
+* interval: :  false(default) | number(ms)
 
-*cyclic:  true(default) | false
+* cyclic:  true(default) | false
