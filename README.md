@@ -28,6 +28,6 @@ and:
  
 * reverse: false(default) |true
 
-* interval: :  false(default) | number(ms)
+* interval: :  false(default) | :number(ms)
 
 * cyclic:  true(default) | false
