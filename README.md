@@ -1,6 +1,10 @@
 # angular-carousel
 
-intall package:`npm install angular2-carousel-simple`
+#intall package#:
+
+`npm install angular2-carousel-simple`
+
+
 app.module:
             
                 import {CarouselModuleModule} from 'angular2-carousel-simple/carousel-module.module';
@@ -8,6 +12,7 @@ app.module:
                     imports:[...,CarouselModuleModule]
                 }
 
+#use#
 angular-carousel-module
     use it as follow:
     
