@@ -2,7 +2,7 @@
 
 #intall package:
 
-`npm install angular2-carousel-simple`
+`npm install angular2-carousel-ztw`
 
 
 app.module:
