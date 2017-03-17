@@ -1,7 +1,8 @@
 # angular-carousel
+## step1:
 `npm install angular2-carousel-ztw --save`
-
-##app.module:
+## step2:
+## app.module:
             
             
           import {CarouselModuleModule} from 'angular2-carousel-ztw/carousel-module.module';
