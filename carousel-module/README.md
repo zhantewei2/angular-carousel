@@ -29,8 +29,8 @@ and:
  
 * reverse: false(default) |true
 
-* interval: :  false(default) | :number(ms)  
-
+* interval: :  false(default) | :number(ms)  
+>auto play
 * cyclic:  true(default) | false
 
 example:
