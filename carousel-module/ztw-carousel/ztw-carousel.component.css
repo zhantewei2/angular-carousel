@@ -15,7 +15,7 @@
 }
 .pre,.next{
   z-index: 10;
-  text-shadow: 0 0 10px white,0 -3px 10px white;
+  text-shadow: 0 0 10px black,0 -3px 10px black;
   position:absolute;
   height:100%;
   display: flex;

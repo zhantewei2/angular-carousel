@@ -1,5 +1,5 @@
 import { Component,ContentChildren,Input,forwardRef} from '@angular/core';
-import {CarouseItemComponent} from '../carouse-item/carouse-item.component';
+import {CarouselItemComponent} from '../carousel-item/carousel-item.component';
 import {Parent} from '../class';
 @Component({
   selector: 'ztw-carousel',
@@ -8,7 +8,7 @@ import {Parent} from '../class';
   providers:[{provide:Parent,useExisting:forwardRef(()=>ZtwCarouselComponent)}]
 })
 export class ZtwCarouselComponent{
-  @ContentChildren(CarouseItemComponent)items;
+  @ContentChildren(CarouselItemComponent)items;
   @Input('reverse')reverse:any;
   @Input('interval')interval:any;
   @Input('cyclic')cyclic:boolean;

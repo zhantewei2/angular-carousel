@@ -2,7 +2,7 @@ import { Component, OnInit, trigger,transition,style,animate,state,HostBinding }
 import {Parent} from '../class';
 let t='0.5s ease-out';
 @Component({
-  selector: 'ztw-carouse-item',
+  selector: 'ztw-carousel-item',
   template: `    
     <ng-content></ng-content>
   `,
@@ -22,7 +22,7 @@ let t='0.5s ease-out';
     ])
   ]
 })
-export class CarouseItemComponent implements OnInit {
+export class CarouselItemComponent implements OnInit {
   slideValue:any;
   @HostBinding('@slide')slide;
   constructor(private parent:Parent) {
