@@ -10,6 +10,8 @@ import:
             
           import {CarouselModuleModule} from 'angular2-carousel-ztw/carousel-module.module';
 
+use:
+====
 angular-carousel-module
     use it as follow:
     
