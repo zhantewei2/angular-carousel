@@ -2,32 +2,37 @@
 angular-carousel-module
     use it as follow:
     
-            <ztw-carousel>
-              <ztw-carouse-item *ngFor='...'>
+            <ztw-carousel style='width:400px,height:300px'>
+              <ztw-carousel-item *ngFor='...'>
                 <img [src]='...' ztw-carousel-img>
-              </ztw-carouse-item>
+              </ztw-carousel-item>
             </ztw-carousel>
 and:
     
-         <ztw-carousel>
-              <ztw-carouse-item *ngFor='...'>
+         <ztw-carousel style='..'>
+              <ztw-carousel-item *ngFor='...'>
                 <img [src]='...' ztw-carousel-img>
                 <div ztw-carousel-header>
                     <h1>title</h1>
                     <div>hello picture!</div>
                 </div>
-              </ztw-carouse-item>
+              </ztw-carousel-item>
             </ztw-carousel>
             
  ***
  `ztw-carousel`
  
  
- attribution:
+ 
+ Properties:
  
  
 * reverse: false(default) |true
 
-* interval: :  false(default) | :number(ms)
+* interval: :  false(default) | :number(ms)  
 
 * cyclic:  true(default) | false
+
+example:
+
+            <ztw-carousel interval='5000'></ztw-carousel>
