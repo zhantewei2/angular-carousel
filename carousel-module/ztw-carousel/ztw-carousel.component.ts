@@ -1,17 +1,18 @@
-import { Component,ContentChildren,Input,forwardRef} from '@angular/core';
+import { Component,ContentChildren,Input,ViewChild} from '@angular/core';
 import {CarouselItemComponent} from '../carousel-item/carousel-item.component';
-import {Parent} from '../class';
+import {slide} from '../animate/animation';
 @Component({
   selector: 'ztw-carousel',
   templateUrl: './ztw-carousel.component.html',
   styleUrls: ['./ztw-carousel.component.css'],
-  providers:[{provide:Parent,useExisting:forwardRef(()=>ZtwCarouselComponent)}]
+  animations:[slide('SlideLeft','-80%'),slide('SlideRight','80%')]
 })
 export class ZtwCarouselComponent{
   @ContentChildren(CarouselItemComponent)items;
-  @Input('reverse')reverse:any;
+  @Input('inverse')inverse:any;
   @Input('interval')interval:any;
   @Input('cyclic')cyclic:boolean;
+  @ViewChild('main')main;
   intervalFn:any;
   imgArr:Array<any>;
   index:number=0;
@@ -24,15 +25,56 @@ export class ZtwCarouselComponent{
     pages:undefined,
     arr:[]
   };
+  showBtn:string='hidden';
   constructor(){};
-  firstset:boolean=false;
   ngAfterContentInit(){
+    let mainNode=this.main.nativeElement,
+      moveDirection,
+      mouseDown,
+      preX:any=null,
+      clearAndSend=(endX)=>{
+        mouseDown=null;
+        if(!preX)return;
+        this.gesture(preX-endX);
+        moveDirection=null;
+        preX=null;
+      };
+    mainNode.onmousedown=(e)=>{
+      preX=e.clientX;
+    };
+    this.main.nativeElement.onmouseup=(e)=>{
+      clearAndSend(e.clientX);
+    };
+    this.leaveMain=(e)=>{
+      if(preX===null)return;
+      clearAndSend(e.clientX);
+    };
+
     this.cyclic=this.cyclic===undefined?true:this.cyclic;
-    this.imgArr=this.items['_results'];
-    this.lastIndex=this.imgArr.length-1;
-    this.navBar.pages=Math.floor(this.lastIndex/this.navBar.pageSize);
-    this.setNavBar();
-    this.interval?setInterval(()=>{this.reverse?this.pre():this.next()},this.interval):0;
+    ((callback)=>{
+      let imgArr=this.items['_results'];
+      if(imgArr.length)return callback(imgArr);
+      let sub=this.items.changes.subscribe(v=>{
+       callback(this.items['_results']);
+       sub.unsubscribe();
+      })
+    })((imgArr)=>{
+      this.imgArr=imgArr;
+      this.imgArr=this.items['_results'];
+      setTimeout(()=>{
+        imgArr.forEach((v,index)=>{
+          v.slide=index==0?'main':'await';
+        });
+      },1);
+      this.lastIndex=this.imgArr.length-1;
+      this.navBar.pages=Math.floor(this.lastIndex/this.navBar.pageSize);
+      this.setNavBar();
+      this.interval?setInterval(()=>{this.inverse?this.pre():this.next()},this.interval):0;
+    })
+  }
+  gesture(len){
+    if(len>50)this.next();
+    if(len<-50)this.pre();
   }
   pre(){
     this.gotoImg(this.getAfterNode(true),'rightHide','leftMain');
@@ -86,5 +128,5 @@ export class ZtwCarouselComponent{
       }
     }
   }
-
+  leaveMain(e){}
 }
