@@ -1,4 +1,6 @@
 # angular-carousel
+for angular v4.0,and rely on Animations;
+
 install:
 =====
 `npm install angular2-carousel-ztw --save`
@@ -40,7 +42,7 @@ and:
  Properties:
  
  
-* reverse: false(default) |true
+* inverse: false(default) |true
 
 * interval: :  false(default) | :number(ms)  
 >set auto play interval time
