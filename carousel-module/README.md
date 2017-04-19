@@ -10,7 +10,7 @@ import:
 #### app.module:
             
             
-          import {CarouselModuleModule} from 'angular2-carousel-ztw/carousel-module.module';
+          import {CarouselModule} from 'angular2-carousel-ztw/carousel.module';
 
 use:
 ====
