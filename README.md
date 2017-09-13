@@ -1,4 +1,4 @@
-# angular-carousel
+# angular-carousel(deprecation! recommanded use ng-ztw)
 for angular v4.0,and rely on Animations;
 
 install:
