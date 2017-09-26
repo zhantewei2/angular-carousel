@@ -123,7 +123,7 @@ export class ZtwCarouselComponent{
         this.navBar.arr.push(i);
       }
     }else{
-      for(let i=beginOffset;i<=i+this.navBar.pageSize;i++){
+      for(let i=beginOffset;i<=this.navBar.pageSize;i++){
         this.navBar.arr.push(i);
       }
     }
